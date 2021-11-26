@@ -8,5 +8,5 @@ export interface AddAccountModel {
 
 export interface AddAccount {
   // eslint-disable-next-line @typescript-eslint/method-signature-style
-  add(account: AddAccountModel): AccountModel
+  add(account: AddAccountModel): Promise<AccountModel>
 }
