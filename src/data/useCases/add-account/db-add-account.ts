@@ -20,6 +20,7 @@ export class DbAddAccount implements AddAccount {
 
     }
 
-    return await new Promise(resolve => resolve(accountMock))
+    // eslint-disable-next-line @typescript-eslint/return-await
+    return new Promise(resolve => resolve(accountMock))
   }
 }
