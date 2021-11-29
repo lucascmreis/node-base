@@ -5,8 +5,10 @@
   "author": "lucascmreis <reislcr.rj@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^2.1.0",
     "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.0.2",
+    "@types/mongodb": "^4.0.7",
     "@types/node": "^16.11.7",
     "@types/validator": "^13.7.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
@@ -32,6 +34,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "mongodb": "^4.2.0",
     "validator": "^13.7.0"
   }
 }
