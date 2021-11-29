@@ -5,6 +5,7 @@
   "author": "lucascmreis <reislcr.rj@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.7",
     "@types/validator": "^13.7.0",
@@ -30,6 +31,7 @@
     "test:ci": "jest --coverage"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "validator": "^13.7.0"
   }
 }
