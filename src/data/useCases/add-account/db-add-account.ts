@@ -11,7 +11,7 @@ export class DbAddAccount implements AddAccount {
 
   async add (account: AddAccountModel): Promise<AccountModel> {
     await this.encrypter.encrypt(account.password)
-    const accountNull = {
+    const accountMock = {
 
       id: 'mock',
       name: 'mock',
@@ -20,6 +20,6 @@ export class DbAddAccount implements AddAccount {
 
     }
 
-    return await new Promise(resolve => resolve(accountNull))
+    return await new Promise(resolve => resolve(accountMock))
   }
 }
