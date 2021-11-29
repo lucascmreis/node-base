@@ -1,3 +1,4 @@
+/* eslint-disable promise/param-names */
 import bcrypt from 'bcrypt'
 import { BcryptAdapter } from './bcrypt-adapter'
 
@@ -26,5 +27,17 @@ describe('Bcrypt Adapter', () => {
     const hashedValue = await sut.encrypt('any_value')
 
     expect(hashedValue).toBe('hash')
+  })
+
+  it('Should throw if bcrypt throws', async () => {
+    const sut = makeSut()
+
+    jest.spyOn(bcrypt, 'hash').mockImplementationOnce(
+      () => {
+        throw new Error()
+      }
+    )
+    const promise = sut.encrypt('any_value')
+    await expect(promise).rejects.toThrow()
   })
 })
